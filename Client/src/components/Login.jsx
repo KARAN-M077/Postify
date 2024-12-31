@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://postify-rdf5.onrender.com/login", {
+      const response = await axios.post("https://postify-karan.onrender.com/login", {
         email,
         password,
       });

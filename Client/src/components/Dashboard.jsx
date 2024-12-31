@@ -12,7 +12,7 @@ function Dashboard() {
   const fetchPosts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("https://postify-rdf5.onrender.com/view-posts", {
+      const response = await axios.get("https://postify-karan.onrender.com/view-posts", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(response.data.posts);
@@ -26,7 +26,7 @@ function Dashboard() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "https://postify-rdf5.onrender.com/create-post",
+        "https://postify-karan.onrender.com/create-post",
         { content, isPublic },
         { headers: { Authorization: `Bearer ${token}` } }
       );

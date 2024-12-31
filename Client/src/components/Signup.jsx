@@ -11,7 +11,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://postify-rdf5.onrender.com/signup", {
+      await axios.post("https://postify-karan.onrender.com/signup", {
         username,
         email,
         password,
