@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link } from "react-router-dom";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -97,9 +97,9 @@ function Signup() {
             </button>
             <div className="flex gap-2 pt-5">
               <p className="text-gray-600 text-sm">Already have an account?</p>
-              <a className="text-gray-600 text-sm underline" href="/login">
+              <Link to="/login" className="text-gray-600 text-sm underline">
                 Login here
-              </a>
+              </Link>
             </div>
           </div>
         </form>
