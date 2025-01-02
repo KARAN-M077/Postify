@@ -15,11 +15,12 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://letspost.vercel.app"],
   methods: ["POST", "PUT", "GET"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
 app.use(cors(corsOptions));
+
 const MONGO_URL = process.env.MONGODB_URL;
 mongoose
   .connect(MONGO_URL, {
